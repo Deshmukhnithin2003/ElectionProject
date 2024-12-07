@@ -18,39 +18,78 @@ public class ElectionController {
     public String home() {
         return "index";
     }
+    
+    @PostMapping("/submitComplaint")
+    public String showComplaintForm() {
+        return "submitComplaint";
+    }
+
+    // Handle the form submission
+   
+
+    
 
     // Handle Login
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, Model model) {
-        Election user = service.login(username, password);
-        if (user != null) {
-            model.addAttribute("user", user);
-            switch (user.getRole()) {
-                case "Admin": return "admin_dashboard";
-                case "Citizen": return "citizen_dashboard";
-                case "Observer": return "observer_dashboard";
-                case "Analyst": return "analyst_dashboard";
-            }
-        }
-        model.addAttribute("error", "Invalid credentials");
-        return "login";
+       return "login";
     }
+
 
     // Registration Page
     @GetMapping("/register")
     public String registerPage() {
         return "register";
     }
+    @GetMapping("/updateProfile")
+    public String showUpdateProfile() {
+        return "updateProfile";
+    }
+
+    // Handle the profile update form submission
+    @PostMapping("/updateProfile")
+    public String handleProfileUpdate(
+            @RequestParam String name,
+            @RequestParam int age,
+            @RequestParam String email,
+            @RequestParam String gender,
+            @RequestParam String aadhaar,
+            @RequestParam String dob,
+            Model model) {
+
+        // Mock saving the updated details
+        model.addAttribute("message", "Your profile has been successfully updated!");
+        model.addAttribute("name", name);
+        model.addAttribute("age", age);
+        model.addAttribute("email", email);
+        model.addAttribute("gender", gender);
+        model.addAttribute("aadhaar", aadhaar);
+        model.addAttribute("dob", dob);
+
+        return "profileUpdateSuccess";
+    }
     
     
     @PostMapping("/user")
-    public String user() {
-        return "user";
+    public String user(@RequestParam String username, @RequestParam String password, Model model) {
+    	 if ("Bhargav".equals(username) && "123".equals(password)) {
+    	        return "user"; // Redirect to user.jsp if credentials match
+    	    }
+    	 else
+        return "wrong";
     }
     
     @PostMapping("/adminuser")
-    public String adminuser() {
-        return "adminuser";
+    public String adminuser(@RequestParam String username, @RequestParam String password, Model model) {
+    	 if ("Admin".equals(username) && "123".equals(password)) {
+ 	        return "adminuser"; // Redirect to user.jsp if credentials match
+ 	    }
+ 	 else
+     return "wrong";
+    }
+    @GetMapping("/viewComplaints")
+    public String complaints() {
+        return "viewComplaints";
     }
     
     @GetMapping("/adminuser")
@@ -66,6 +105,10 @@ public class ElectionController {
     public String admin() {
         return "admin";
     }
+    @GetMapping("/viewFeedback")
+    public String FeedBack() {
+        return "viewFeedback";
+    }
     @GetMapping("/home")
     public String homeGround() {
         return "home";
@@ -78,6 +121,10 @@ public class ElectionController {
     @GetMapping("/profile")
     public String profile() {
         return "profile";
+    }
+    @GetMapping("/Adminprofile")
+    public String Adminprofile() {
+        return "AdminProfile";
     }
     
     @GetMapping("/raiseComplaint")

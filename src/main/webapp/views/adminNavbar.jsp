@@ -58,15 +58,15 @@
 
     <!-- Navbar -->
     <div class="navbar">
-        <div class="logo">
+        <div class="logo" >
             Online Monitoring System
         </div>
         <div class="links">
             <a href="/adminuser">Home</a>
             <a href="/logout">Logout</a>
             <a href="/viewComplaints">View Complaints</a>
-            <a href="/viewUsers">View Users</a>
-            <a href="/profile">Profile</a>
+            <a href="/viewFeedback">View FeedBack</a>
+            <a href="/Adminprofile">Profile</a>
         </div>
     </div>
 

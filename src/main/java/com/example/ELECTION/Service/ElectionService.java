@@ -23,5 +23,7 @@ public class ElectionService {
     public List<Election> getAllUsers() {
         return repository.findAll();
     }
-
+    public void save(Election election) {
+    	repository.save(election); // Saves to the database
+    }
 }

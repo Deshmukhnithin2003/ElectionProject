@@ -8,11 +8,21 @@
         /* General styles */
         body {
             font-family: Arial, sans-serif;
-            background: url('https://www.shutterstock.com/shutterstock/photos/2395185111/display_1500/stock-vector-election-commission-of-india-logo-editorial-use-only-bangalore-india-december-2395185111.jpg') no-repeat center center fixed;
-            background-size: cover;
             margin: 0;
             padding: 0;
             height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Video background styling */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the screen */
+            z-index: -1; /* Places the video behind other content */
         }
 
         /* Navbar styling */
@@ -20,18 +30,18 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
+            background-color: rgba(0, 0, 0, 0.9); /* Slightly darker for better contrast */
             color: white;
             display: flex;
             justify-content: space-between; /* Center title and align buttons to the right */
             align-items: center;
-            padding: 15px 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            padding: 15px 15px;
+            box-shadow: 0 0px 9px rgba(0, 0, 0, 0.3);
             z-index: 1000;
         }
 
         .navbar h1 {
-            font-size: 24px;
+            font-size: 28px;
             margin: 0;
             flex-grow: 1;
             text-align: center;
@@ -40,7 +50,7 @@
 
         .navbar .left-links {
             display: flex;
-            gap: 20px;
+            gap: 10px;
         }
 
         .navbar a {
@@ -68,7 +78,6 @@
             text-align: center;
         }
 
-        /* Custom font and title style */
         .content h2 {
             font-size: 36px;
             font-weight: 600;
@@ -96,10 +105,16 @@
                 font-size: 14px;
             }
         }
-
     </style>
 </head>
 <body>
+    <!-- Background video -->
+    <video id="background-video" autoplay muted loop>
+        <source src="https://media.istockphoto.com/id/2150561960/video/hand-casting-vote-in-a-ballot-box-three-glow-options-3d-render.mp4?s=mp4-640x640-is&k=20&c=lX7Q8VpNd2H0t3Suob7vQqtL7YOHd4SgzX0e44PpheA=" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navbar -->
     <div class="navbar">
         <h1>Online Voting Monitoring System</h1>
         <div class="left-links">
@@ -107,10 +122,9 @@
             <a href="/register">Register</a>
         </div>
     </div>
-
-    
 </body>
 </html>
+
 
 
 
