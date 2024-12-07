@@ -10,7 +10,7 @@
     <groupId>com.example</groupId>
     <artifactId>ELECTION</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packing>jar</packing>
+    <packaging>jar</packaging>
     <name>ELECTION</name>
     <description>Demo project for Spring Boot</description>
     <properties>
