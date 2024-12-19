@@ -1,8 +1,5 @@
 # 🌟 Election Monitoring Web Application 🌟
 
-![Election Monitoring Banner](https://via.placeholder.com/800x200?text=Election+Monitoring+Web+Application)
-
----
 
 ## 🌟 Overview
 
