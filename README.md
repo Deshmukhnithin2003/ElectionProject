@@ -1,8 +1,5 @@
 # 🌟 Election Monitoring Web Application 🌟
 
-
-## 🌟 Overview
-
 The **Election Monitoring Web Application** is a powerful full-stack Java project designed to **track and manage elections in real time**. Built with **Spring Boot** and modern Java technologies, it ensures:
 - Secure voter registration.
 - Real-time updates on election results.
