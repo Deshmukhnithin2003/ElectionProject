@@ -51,12 +51,6 @@ Before setting up, ensure you have the following installed:
 3. **Maven** for dependency management  
 4. **IntelliJ IDEA / Eclipse** for development  
 
----
 
-## 🛠️ Installation
 
-### 🖥️ Backend Setup
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/username/election-monitoring-java.git
-   cd election-monitoring-java
+
